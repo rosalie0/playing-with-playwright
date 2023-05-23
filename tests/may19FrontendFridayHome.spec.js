@@ -6,7 +6,9 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Homepage", () => {
-  test("has title containing Frontend Friday", async ({ page }) => {
+  test("has title containing substring of Frontend Friday", async ({
+    page,
+  }) => {
     await expect(page).toHaveTitle(/Frontend Friday/);
   });
   // test("has only one h1");
